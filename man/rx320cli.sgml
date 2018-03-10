@@ -1,0 +1,321 @@
+<!doctype refentry PUBLIC "-//Davenport//DTD DocBook V3.0//EN" [
+
+  <!-- Fill in your name for FIRSTNAME and SURNAME. -->
+  <!ENTITY dhfirstname "<firstname>A. Maitland</firstname>">
+  <!ENTITY dhsurname   "<surname>Bottoms</surname>">
+  <!-- Please adjust the date whenever revising the manpage. -->
+  <!ENTITY dhdate      "<date>December 11, 2000</date>">
+  <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
+       allowed: see man(7), man(1). -->
+  <!ENTITY dhsection   "<manvolnum>1</manvolnum>">
+  <!ENTITY dhemail     "<email>aa4hs@amrad.org</email>">
+  <!ENTITY dhusername  "A. Maitland Bottoms">
+  <!ENTITY dhucpackage "<refentrytitle>RX320</refentrytitle>">
+  <!ENTITY dhpackage   "rx320">
+
+  <!ENTITY debian      "<productname>Debian GNU/Linux</productname>">
+  <!ENTITY gnu         "<acronym>GNU</acronym>">
+]>
+
+<refentry>
+  <docinfo>
+    <address>
+      &dhemail;
+    </address>
+    <author>
+      &dhfirstname;
+      &dhsurname;
+    </author>
+    <copyright>
+      <year>2000</year>
+      <holder>&dhusername;</holder>
+    </copyright>
+    &dhdate;
+  </docinfo>
+  <refmeta>
+    &dhucpackage;
+
+    &dhsection;
+  </refmeta>
+  <refnamediv>
+    <refname>&dhpackage;</refname>
+
+    <refpurpose>control a Ten-Tec RX-320 receiver via serial port</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>&dhpackage;</command>
+
+      <arg><option>-m <replaceable>AM</replaceable></option></arg>
+      <arg><option>--frequency <replaceable>10000.0</replaceable></option></arg>
+      <arg><option>-b <replaceable>3000</replaceable></option></arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+  <refsect1>
+    <title>DESCRIPTION</title>
+
+    <para>This manual page documents the
+      <command>&dhpackage;</command> command.</para>
+
+    <para><command>&dhpackage;</command>
+      is a complete implementation of the documented command set
+      of the Ten-Tec RX-320 receiver, allowing easy control from
+      shell scripts, or any command line environment.</para>
+
+    <para>Run "rx320 --help" to see the built-in information, and/or
+      read on... </para>
+  </refsect1>
+  <refsect1>
+    <title>OPTIONS</title>
+
+    <para>These programs follow the usual GNU command line syntax,
+      with long options starting with two dashes (`-').  A summary of
+      options is included below.  For a complete description, see the
+      <application>Info</application> files.</para>
+
+    <variablelist>
+      <varlistentry>
+        <term><option>-f F</option>
+          <option>--frequency F</option>
+        </term>
+        <listitem>
+          <para>Set frequency to receive in kHz.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-m [AM|USB|LSB|CW]</option>
+          <option>--mode [AM|USB|LSB|CW]</option>
+        </term>
+        <listitem>
+          <para>Select demodulation mode.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-b BW</option>
+          <option>--bandwidth BW</option>
+        </term>
+        <listitem>
+          <para>Bandwidth of filter to use in Hz.</para>
+          <para>The radio has 34 filters, ranging from 300-8000Hz.
+	  Entering a number will select to closest filter.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-a [FAST|MEDIUM|SLOW]</option>
+          <option>--agc [FAST|MEDIUM|SLOW]</option>
+        </term>
+        <listitem>
+          <para>Set Automatic Gain Control.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-v VOLUME</option>
+          <option>--volume VOLUME</option>
+        </term>
+        <listitem>
+          <para>Set audio level of both output of the radio simultaneously.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-s VOLUME</option>
+          <option>--speaker VOLUME</option>
+        </term>
+        <listitem>
+          <para>Set audio level at radio's speaker output port only.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-l VOLUME</option>
+          <option>--line VOLUME</option>
+        </term>
+        <listitem>
+          <para>Set audio level at radio's line output port only.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-S</option>
+          <option>--signal</option>
+        </term>
+        <listitem>
+          <para>Report signal strength.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-M DELAY</option>
+          <option>--meter=DELAY</option>
+        </term>
+        <listitem>
+          <para>Make repeated reports of signal strength, where
+	    DELAY is a positive decimal integer in seconds
+	    to wait between sampling signal strength.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-V</option>
+          <option>--Version</option>
+        </term>
+        <listitem>
+          <para>Show radio's firmware version.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-d</option>
+          <option>--debug</option>
+        </term>
+        <listitem>
+          <para>Be a little more verbose about actions.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-L</option>
+          <option>--list-options</option>
+        </term>
+        <listitem>
+          <para>List filter index number and bandwidths.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-h</option>
+          <option>--help</option>
+        </term>
+        <listitem>
+          <para>Show summary of options.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><option>-v</option>
+          <option>--version</option>
+        </term>
+        <listitem>
+          <para>Show version of program.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>SUMMARY</title>
+
+    <para>The receiver only accepts seven basic commands, of which only two
+      provide and return data.</para>
+
+    <para>Options can be used in almost any combination.</para>
+    <para>FREQUENCY - Floating point number, units kiloHertz. Nominal range
+      0-30000. WWV is at 2500, 5000, 10000,... etc., see if you can hear it.
+    </para>
+    <para> MODE - AM USB LSB CW - OK, case not important. Oh, and rx320
+      only looks at the first character of the mode parameter 
+      in any case.</para>
+    <para>BANDWIDTH - Filter bandwidth in Hz.
+      There are a bunch of factory preset bandwidths.
+      Specify any positive integer, and you'll get the closest fitting filter.
+      (Caveat: Attention Hackers! Specifying a 12 Hz filter actually gets you a
+      2700 Hz filter. The narrowest filter in the radio is 300 Hz, so I used
+      the numbers 0-33 to select the filters by number.)</para>
+    <para>The --list-filters option will list the filter bandwidths
+      available, if you really must know.</para>
+    <para>VOLUME - 63-0 -
+      Still not hearing anything? Turn up the volume - all the way up to zero!
+      This value perhaps should be called "audio attenuation" instead, it is
+      specified by positive decimal integers in the range 0-63, and 63 sounds
+      like "off" to me.</para>
+    <para>Setting volume
+      It might be just as well to use -v or --volume with rx320
+      to set both the line out and the speaker out audio levels.
+      Control freaks will be happy to know that -l or --line
+      and -s or --speaker options allow levels on these ports to be set
+      independently.</para>
+    <para>AGC - This can be one of FAST MEDIUM or SLOW.
+      OK, so case doesn't matter. Oh, and only the first letter is checked
+      in any case.</para>
+    <para>Firmware version -
+      If you are at your wits end with this program, check to see if
+      maybe your radio is the same as mine. Use -V or --Version to report
+      the radio's firmware version. This program was written for a radio with 
+      VER 106.</para>
+    <para>Meter - 
+      Rather than call this program over and over just to get signal strength,
+      the -m or --meter option, along with a delay, will run an infinite loop
+      for you. Not that the delay can be 0 (zero), but you won't get an infinite
+      number of reports per second because the program still has to talk to the
+      radio at 1200 baud. Delay factors larger than a minute produce date and
+      time stamped output. Be careful what you parse this output with!
+    </para>
+  </refsect1>
+  <refsect1>
+    <title>EXAMPLE USAGE</title>
+
+    <para>Listen to WWV at 10 MHz:</para>
+    <para>rx320 --frequency=10000 --mode=AM --bandwidth=3000 --volume=0 /dev/ttyS0</para>
+    <para>That's nice. What's the signal strength?</para>
+    <para>rx320 --signal /dev/ttyS0</para>
+    <para>Hmm. Now try:</para>
+    <para>rx320 --meter=5 /dev/ttyS0</para>
+    <para>Attention unix nerds:</para>
+    <para>rx320 -v 63 - > /dev/ttyS0</para>
+    <para>This program uses the GNU libc argp method to handle command line
+      arguments, which should be familiar to you.</para>
+  </refsect1>
+  <refsect1>
+    <title>SEE ALSO</title>
+
+    <para>multimon (1), sfmike (1), mrtg (1), pcrd (1).</para>
+
+    <para>The program implements methods described in the
+      <citetitle>RX-320 PC-RADIO Programmer's Reference
+	Guide</citetitle> available from Ten-Tec at
+      http://www.tentec.com/</para>
+  </refsect1>
+  <refsect1>
+    <title>HISTORY</title>
+
+    <para>An AMRAD (http://www.amrad.org/) project came up where it would
+      be useful to run radio receivers remotely. It seemed that Debian
+      would be a useful and stable platform to handle dial up
+      telephone access, control of the radio, and digitizing of
+      the audio at a remote site. See
+      http://www.amrad.org/projects/lf/ 
+      to see if this really worked.</para>
+  </refsect1>
+  <refsect1>
+    <title>BUGS</title>
+
+    <para>Doesn't do anything with the string sent by the radio upon
+      power up.
+      Does not honor or use serial port locking conventions.
+      Does not share a common syntax to the pcrd
+      Icom PCR-1000 receiver control program, making common front end
+      user interfaces harder to write.</para>
+  </refsect1>
+  <refsect1>
+    <title>AUTHOR</title>
+
+    <para>This manual page was written by &dhusername; &dhemail; for
+      the &debian; system (but may be used by others).</para>
+
+    <!-- <para>Permission is granted to copy, distribute and/or modify
+      this document under the terms of the <acronym>GNU</acronym> Free
+      Documentation License, Version 1.1 or any later version
+      published by the Free Software Foundation; with no Invariant
+      Sections, no Front-Cover Texts and no Back-Cover Texts.  A copy
+      of the license can be found under
+      <filename>/usr/share/common-licenses/FDL</filename>.</para> -->
+
+  </refsect1>
+</refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:2
+sgml-indent-data:t
+sgml-parent-document:nil
+sgml-default-dtd-file:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

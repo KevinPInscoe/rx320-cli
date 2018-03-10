@@ -1,0 +1,13 @@
+Source: rx320
+Section: hamradio
+Priority: optional
+Maintainer: A. Maitland Bottoms <bottoms@debian.org>
+Build-Depends: debhelper, docbook-to-man
+Standards-Version: 3.1.1
+
+Package: rx320
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Control a Ten-Tec RX-320 receiver
+ Control a Ten-Tec RX-320 receiver via a serial port, providing a
+ command line interface to the radio.

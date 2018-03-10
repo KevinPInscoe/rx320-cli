@@ -1,0 +1,19 @@
+rx320 (1.0-2) unstable; urgency=low
+
+  * Correct Build-depends line; closes #81808
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Tue, 30 Jan 2001 19:22:30 -0500
+
+rx320 (1.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Mon, 11 Dec 2000 22:19:13 -0500
+
+rx320-client (1.1) 
+
+  * Renamed project to rx320-cli to avoid confusion with Hector Peraza's rx320
+    gui.
+
+ -- Kevin P. Inscoe <kevin@inscoe.org> Sat, 28 March 2009
+
