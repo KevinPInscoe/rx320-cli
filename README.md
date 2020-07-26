@@ -5,7 +5,7 @@ rx320-client (1.1)
   * Renamed project to rx320-cli to avoid confusion with Hector Peraza's rx320
     gui.
 
- -- Kevin P. Inscoe <kevin@inscoe.org> Sat, 28 March 2009
+ -- Kevin P. Inscoe kevin.inscoe@gmail.com Sat, 28 March 2009
 
 
 
